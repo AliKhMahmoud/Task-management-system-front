@@ -1,0 +1,30 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-bottom: 2px solid #64749A;
+    border-top: 2px solid #64749A;
+    h1 {
+        font-size: 40px;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        font-size: 30px;
+        .role {
+            display: flex;
+            gap: 10px;
+            border: 1px solid #333333;
+            padding: 10px;
+            border-radius: 10px;
+
+            
+        }
+        && .notices-icon ,mood-toggle {
+                font-size: 50px;
+            }
+    }
+}

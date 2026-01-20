@@ -1,0 +1,134 @@
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    width: 100%;
+    background-color: #fcfcfc; /* خلفية هادئة لتمييز الكروت */
+}
+
+.task-card-member {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px; /* زوايا أكثر نعومة كما في الصورة */
+    padding: 24px;
+    width: 48%; /* العرض المطلوب بين 40% و 50% */
+    min-width: 420px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تأثير التحديد الأزرق عند التحويم أو الاختيار */
+.task-card-member:hover, 
+.task-card-member.active {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);
+    transform: translateY(-2px);
+}
+
+/* الهيدر: دفع الحالة (Badge) لأقصى اليمين */
+.task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.project-name {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-top: 2px;
+    display: block;
+}
+
+/* تنسيق شارة الحالة (Completed / In Progress) */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* اللون الأخضر للمكتمل */
+.status-badge.completed {
+    background-color: #10b981; 
+    color: #ffffff;
+}
+
+/* اللون الأزرق لأي حالة أخرى */
+.status-badge.in-progress {
+    background-color: #3b82f6; 
+    color: #ffffff;
+}
+
+/* تنسيق وصف المهمة */
+.task-description {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 16px 0 24px 0;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+/* الفوتر: دفع الأولوية لأقصى اليمين */
+.task-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* يضمن بقاء الفوتر في أسفل الكرت */
+}
+
+.task-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.calendar-icon {
+    font-size: 1.1rem;
+    color: #9ca3af;
+}
+
+/* شارات الأولوية المتدرجة */
+.priority-badge {
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+.priority-badge.high {
+    color: #ef4444; 
+    background-color: #fef2f2;
+    border-color: #fee2e2;
+}
+
+.priority-badge.medium {
+    color: #f59e0b;
+    background-color: #fffbeb;
+    border-color: #fef3c7;
+}
+
+.priority-badge.low {
+    color: #3b82f6;
+    background-color: #eff6ff;
+    border-color: #dbeafe;
+}

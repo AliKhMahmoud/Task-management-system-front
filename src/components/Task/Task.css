@@ -1,0 +1,72 @@
+.task {
+    margin-top: 30px;
+    .taskNav {
+        display: flex;
+        justify-content: space-between;
+        .createTask {
+            button {
+                padding: 15px;
+                font-size: 25px;
+                background-color: #2563EB;
+                color: white;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+    }
+    .taskContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px;
+    
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+    
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                padding: 0 5px;
+    
+                h3 {
+                    font-weight: 700;
+                    color: #111827;
+                }
+    
+                .Count {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #f3f4f6;
+                    color: #6b7280;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border: 1px solid #e5e7eb;
+                }
+            }
+    
+            .task-body {
+                min-height: 500px;
+                border-radius: 16px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+    
+            &.to-do-col .task-body { background-color: #F1F5F9; }
+            &.in-progress-col .task-body { background-color: #EFF6FF; }
+            &.completed-col .task-body { background-color: #F0FDF4; }
+            &.delayed-col .task-body { background-color: #FEF2F2; }
+        }
+    }
+}
+
